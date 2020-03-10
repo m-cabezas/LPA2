@@ -25,5 +25,31 @@
   <%= @burger.code %>
 </p>
 
+<p>
+  <strong>Nutriments:</strong>
+  <table>
+    <tr>
+      <th>Nutrition Facts</th>
+      <th>As sold for 100g/100ml</th>
+    </tr>
+    <tr>
+      <th>Energy</th>
+      <td><%= @burger.nutriments[0]["energy"]%> </td>
+    </tr>
+    <tr>
+      <th>Fat</th>
+      <td><%=@burger.nutriments[0]["fat"]%> <%=@burger.nutriments[0]["fat_unit"]%></td>
+    </tr>
+    <tr>
+      <th>Salt</th>
+      <td><%=@burger.nutriments[0]["salt"]%> <%=@burger.nutriments[0]["salt_unit"]%></td>
+    </tr>
+    <tr>
+      <th>Proteins</th>
+      <td><%=@burger.nutriments[0]["proteins"]%> <%=@burger.nutriments[0]["proteins_unit"]%></td>
+    </tr>
+  </table>
+</p>
+
 <%= link_to 'Edit', edit_burger_path(@burger) %> |
 <%= link_to 'Back', burgers_path %>
