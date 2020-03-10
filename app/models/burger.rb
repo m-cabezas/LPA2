@@ -10,6 +10,6 @@ class Burger < ApplicationRecord
         code = self.code
         product = Openfoodfacts::Product.get(code, locale: 'fr')
         @nut = product.nutriments
-        @nutriments = ["energy" => @nut.energy_100g, "fat" => @nut.fat_100g, "fat_unit" => @nut.fat_unit, "salt" => @nut.salt_100g, "salt_unit" => @nut.salt_unit, "proteins" => @nut.proteins_100g, "proteins_unit" => @nut.proteins_unit]
+        @nutrs = ["energy" => @nut.energy_100g, "fat" => @nut.fat_100g, "fat_unit" => @nut.fat_unit, "salt" => @nut.salt_100g, "salt_unit" => @nut.salt_unit, "proteins" => @nut.proteins_100g, "proteins_unit" => @nut.proteins_unit]
     end
 end
